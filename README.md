@@ -1,21 +1,21 @@
-This repo contains the following:
--- Dashboard to vsualize Business Analytics for multiple sectors
--- Workflow to generate eutopian data in Dynatrace Sprint tenants
--- Business Flows for each sector
+## This repo contains the following:
+- Dashboard to visualize Business Analytics for multiple sectors
+- Workflow to generate utopian data in Dynatrace Sprint tenants
+- Business Flows for each sector
 
+## Uploading to Dynatrace
 
-Uploading to Dynatrace
-# Dashboard
-Navigate to Dashboards in platform tenant
-Click upload
-Upload the dashboard json
+### Dashboard
+1. Navigate to **Dashboards** in the platform tenant.
+2. Click **Upload**.
+3. Upload the dashboard JSON file.
 
-# Workflow
-Navigate to Workflows in platform tenant
-Click Upload
-Upload the workflow json
+### Workflow
+1. Navigate to **Workflows** in the platform tenant.
+2. Click **Upload**.
+3. Upload the workflow JSON file.
 
-# Business Flows
-Navigate to API - Classic Environment APi V2
-Go to Settings > Post / Settings/Objects
-Inset the BusinessFlow jsons to the JSOn body and Execute
+### Business Flows
+1. Navigate to **API - Classic Environment API V2**.
+2. Go to **Settings** > **Post / Settings/Objects**.
+3. Insert the BusinessFlow JSONs into the JSON body and click **Execute**.
