@@ -1,3 +1,7 @@
+## Pre-reqs
+- Install Business Flow Application from Hub
+- Access Token with following scopes: **Write Settings**
+
 ## This repo contains the following:
 - Dashboard to visualize Business Analytics for multiple sectors
 - Workflow to generate utopian data in Dynatrace Sprint tenants
