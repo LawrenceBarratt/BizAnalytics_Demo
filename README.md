@@ -1,5 +1,10 @@
+# How to demo Business Analytics in Dynatrace with minimal effort
 
-How to demo Business Analytics in Dynatrace with minimal effort
+## Business Analytics
+![{0D3EE3B7-4490-437B-A63A-0B9CBD5A40A1}](https://github.com/user-attachments/assets/78b1cd38-bbc1-4340-b97d-aa2ad8fdb9fd)
+
+![{13F75CDF-737B-41B6-9779-4CA2C094AFD4}](https://github.com/user-attachments/assets/31214cd9-863a-45ef-9815-e4ad2f0bac54)
+
 ## High Level Overview
 ![{E6491A0F-8856-4AF4-9D82-8D306AAD7352}](https://github.com/user-attachments/assets/0acd614f-ffa8-4ce7-89c9-00e3c325efdf)
 
