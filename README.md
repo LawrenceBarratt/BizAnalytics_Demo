@@ -2,8 +2,11 @@
 
 ## Business Analytics
 ![{0D3EE3B7-4490-437B-A63A-0B9CBD5A40A1}](https://github.com/user-attachments/assets/78b1cd38-bbc1-4340-b97d-aa2ad8fdb9fd)
+Store and correlate Business Analytics from any source, and make context based decisions on massively parrellel processed data sets.
 
 ![{13F75CDF-737B-41B6-9779-4CA2C094AFD4}](https://github.com/user-attachments/assets/31214cd9-863a-45ef-9815-e4ad2f0bac54)
+![{E0DCEBCE-C23E-429F-AAD4-29C04C2608D0}](https://github.com/user-attachments/assets/eb493c54-e8a4-4002-93b2-4bf012fb8935)
+Utilize the Dynatrace platform and all it's features with Business Analytics in mind.
 
 ## High Level Overview
 ![{E6491A0F-8856-4AF4-9D82-8D306AAD7352}](https://github.com/user-attachments/assets/0acd614f-ffa8-4ce7-89c9-00e3c325efdf)
