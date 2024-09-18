@@ -1,5 +1,11 @@
 # How to Demo Business Analytics in Dynatrace with Minimal Effort
 
+# What value this shows in the Dynatrace Platform
+- Business Analytics in Dynatrace for multiple sectors
+- Dynatrace Platform Dashboards
+- Dynatrace Workflows and Automation Engine
+- Dynatrace Query Language - DQL
+
 ## Overview of Business Analytics
 
 ![Business Analytics](https://github.com/user-attachments/assets/78b1cd38-bbc1-4340-b97d-aa2ad8fdb9fd)
