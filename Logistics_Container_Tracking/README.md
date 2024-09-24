@@ -1,85 +1,138 @@
-# Container Tracking Workflow and Dashboards
+# How to Demonstrate Logistics Container Tracking in Dynatrace
 
-This project demonstrates a **container tracking simulation** using a custom JavaScript script integrated into Dynatrace. The workflow simulates the journey of containers from booking to final delivery, generating business events for each stage and visualizing these through three dashboards that show the progress across multiple stages.
+## What Value This Shows in the Dynatrace Platform
+- **Logistics Monitoring**: Full visibility into container transportation processes.
+- **Dynatrace Platform Dashboards**: Detailed dashboards showing every step in the logistics workflow.
+- **Dynatrace Workflows**: Automated tracking of container journeys with Dynatrace workflows.
+- **Dynatrace Query Language (DQL)**: Query container data for KPIs and insights.
 
-## Workflow Overview
+## Overview of Logistics Container Tracking
 
-The container tracking process simulates the key stages of a logistics workflow:
+The logistics container tracking solution leverages the Dynatrace platform to provide comprehensive monitoring of container operations across multiple steps, using data from various sources, including IoT sensors, GPS tracking, and logistics platforms.
 
-1. **Booking and Allocation**
-2. **Collection and Inspection**
-3. **Loading, Sealing, and Transportation**
-4. **Sea Transit and Unloading**
-5. **Final Delivery and Return**
+![Workflow Execution](file-j3AKsyo8iCqUCz9gx0DMtQLx)
 
-Each step is enriched with data such as container weight, product type, errors, incident tracking, and transit times. The events are ingested into Dynatrace for monitoring and visualization using dashboards that track container movements in real-time.
+With a single workflow trigger, Dynatrace tracks container journeys from booking to final delivery, collecting data at each step to identify potential issues and optimize operations.
 
-### Steps Included in the Workflow
+---
 
-1. **Container Booking**: Track when containers are booked, allocated, and prepared for pickup.
-2. **Container Allocation**: Monitors allocation and container readiness.
-3. **Container Collection**: Tracks pickup from the warehouse.
-4. **Container Inspection**: Simulates inspection before loading.
-5. **Loading Goods**: Monitors loading, including delays.
-6. **Sealing**: Ensures that the container is sealed for transport.
-7. **Transport to Port**: Tracks the journey to the port.
-8. **Loading onto Ship**: The container is loaded onto a vessel.
-9. **Sea Transit**: Monitors transit time at sea, ship weight, and delays.
-10. **Arrival at Destination Port**: Tracks unloading and crane operation at the destination.
-11. **Transport to Warehouse**: Tracks transport from the port to the final warehouse.
-12. **Final Delivery and Return**: Tracks delivery to the customer and return of the empty container.
+## High-Level Overview of Tracking Flow
 
-## Dynatrace Integration
+- **12-Step Process**: From container booking to delivery and return.
+- **Data Collection**: Each step is monitored using different data sources (e.g., SAP TM, IoT, GPS).
+- **Error Detection**: Errors are logged and tracked in real-time, allowing for immediate insights into potential failures.
 
-### Script Execution
+### Example Process Breakdown:
+- **Booking**: Time taken for the container booking.
+- **Allocation**: Efficiency in container allocation.
+- **Transport**: Container pickup and delivery, tracked via GPS.
+- **Sea Transit**: Transit duration and delays at sea.
+- **Return**: Delivery and container return, ensuring completeness of operations.
 
-The **JavaScript code** runs inside Dynatrace, utilizing the `businessEventsClient` to ingest business events. The script simulates the journey of containers and tracks various KPIs such as:
+---
 
-- **Booking and Allocation Efficiency**
+## Dynatrace Dashboards: Visualizing Key Metrics
+
+Three dashboards are available for visualizing container tracking metrics, split into groups of steps (Steps 1-4, Steps 5-8, and Steps 9-12). These dashboards track various metrics like booking time, pickup time, loading efficiency, and more.
+
+### Dashboard 1: Steps 1-4 (Booking, Allocation, Collection, and Inspection)
+
+This dashboard provides insights into the first four steps of the container journey, tracking metrics such as:
+- **Booking Time**
+- **Allocation Efficiency**
 - **Pickup Time**
+- **Inspection Efficiency**
+
+![Steps 1-4 Dashboard](file-kolcUDojK2k13wMup3jOsqMG)
+
+---
+
+### Dashboard 2: Steps 5-8 (Loading, Sealing, and Port Operations)
+
+This dashboard focuses on the middle steps of the journey, including loading goods, sealing containers, and transporting to the port:
+- **Loading Time**
 - **Sealing Time**
-- **Transit Duration at Sea**
-- **Delivery Time**
+- **Transport to Port**
+- **Loading to Ship**
 
-**Custom Attributes** are added to each step to provide further context, such as:
+![Steps 5-8 Dashboard](file-8qhnVKNtP54iclzKUALXI2jZ)
 
-- Container weight
-- Product type
-- Price of the container
-- Ship number and port of origin/destination
-- Whether the container is empty or full
+---
 
-The script includes **error simulation** with random delays, which is tracked and visualized in the dashboards.
+### Dashboard 3: Steps 9-12 (Sea Transit, Unloading, and Delivery)
 
-### Steps Grouped in Dashboards
+The final dashboard covers the transit and delivery phases, showing key metrics for:
+- **Sea Transit**
+- **Unloading at Destination Port**
+- **Transport to Warehouse**
+- **Delivery and Return**
 
-The steps of the workflow are split across **three Dynatrace dashboards**:
+![Steps 9-12 Dashboard](file-DKCwgC1EuuPDeOZsxyXIFI13)
 
-1. **Dashboard 1: Step 1-4**
-    - Booking
-    - Allocation
-    - Collection
-    - Inspection
+---
 
-2. **Dashboard 2: Step 5-8**
-    - Loading Goods
-    - Sealing
-    - Transport to Port
-    - Loading to Ship
+## Additional Insights: Logistics Notebook
 
-3. **Dashboard 3: Step 9-12**
-    - Sea Transit
-    - Arrival at Destination Port
-    - Transport to Warehouse
-    - Final Delivery and Return
+The **Logistics Notebook** provides deep insights into the cost of containers at various ports, revenue loss, and savings opportunities, offering valuable data for optimizing logistics costs.
 
-## Example Use Case
+- **Container Cost at Ports**
+- **Revenue Loss**
+- **Empty Container Costs**
 
-This workflow can be used by logistics companies to monitor the entire lifecycle of their container shipments. It helps ensure that:
+![Logistics Notebook](file-pwzoiDiDCB8BU2CyBTUdN3z5)
 
-- Containers are booked, loaded, and shipped on time.
-- Delays are detected early.
-- KPIs are monitored for efficiency.
-- Issues like transit delays or loading errors are tracked and resolved quickly.
+---
 
-The visualization through Dynatrace dashboards makes it easy to keep track of all stages in real-time.
+## Prerequisites
+
+Before starting, ensure the following:
+
+1. **Install Workflow**: Upload the workflow JSON file to your Dynatrace tenant.
+2. **Install Dashboards**: Upload all dashboard JSON files.
+3. **Enable Data Collection**: Ensure you have set up Dynatrace for IoT, GPS, and REST API data collection.
+
+## How to Set Up and Run the Workflow
+
+### Step 1: Upload the Workflow
+
+1. Navigate to **Workflows** in your Dynatrace tenant.
+2. Click **Upload** and select the workflow JSON file.
+3. Execute the workflow manually using an **On-Demand Trigger** or schedule it for periodic execution.
+
+### Step 2: Upload Dashboards
+
+1. Navigate to **Dashboards** in your Dynatrace tenant.
+2. Click **Upload** and select the corresponding dashboard JSON files (for Steps 1-4, Steps 5-8, and Steps 9-12).
+3. View the dashboards to monitor key logistics metrics in real-time.
+
+### Step 3: Run the Workflow
+
+1. Trigger the workflow via **On-Demand Trigger** to simulate container journeys.
+2. Monitor the dashboards to observe the progression through the steps.
+3. Review metrics like booking time, allocation efficiency, transport times, and more.
+
+---
+
+## Repository Contents
+
+- **Workflow**: Automates container tracking and generates business events for analysis.
+- **Dashboards**: Visualize business analytics for container tracking, errors, and incidents.
+- **Logistics Notebook**: Provides detailed analysis of container costs, revenue loss, and savings.
+
+---
+
+## Key Metrics Tracked:
+
+1. **KPIs**: Booking Time, Pickup Time, Loading Time, Transport Time, and more.
+2. **Errors and Incidents**: Tracks issues detected in each step.
+3. **Revenue Metrics**: 
+   - **Container Revenue**: Revenue generated for each container.
+   - **Revenue Lost**: Revenue lost due to errors or delays.
+4. **MTTD/MTTI/MTTR**: 
+   - **MTTD**: Mean Time to Detect issues.
+   - **MTTI**: Mean Time to Investigate issues.
+   - **MTTR**: Mean Time to Resolve issues.
+
+## Conclusion
+
+With Dynatrace's integrated workflow and dashboards, the Logistics Container Tracking solution provides a complete overview of container journeys, helping you make informed decisions based on real-time data,
