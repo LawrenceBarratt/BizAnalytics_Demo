@@ -10,7 +10,6 @@
 
 The logistics container tracking solution leverages the Dynatrace platform to provide comprehensive monitoring of container operations across multiple steps, using data from various sources, including IoT sensors, GPS tracking, and logistics platforms.
 
-![Workflow Execution](file-j3AKsyo8iCqUCz9gx0DMtQLx)
 
 With a single workflow trigger, Dynatrace tracks container journeys from booking to final delivery, collecting data at each step to identify potential issues and optimize operations.
 
@@ -43,7 +42,6 @@ This dashboard provides insights into the first four steps of the container jour
 - **Pickup Time**
 - **Inspection Efficiency**
 
-![Steps 1-4 Dashboard](file-kolcUDojK2k13wMup3jOsqMG)
 
 ---
 
@@ -55,8 +53,6 @@ This dashboard focuses on the middle steps of the journey, including loading goo
 - **Transport to Port**
 - **Loading to Ship**
 
-![Steps 5-8 Dashboard](file-8qhnVKNtP54iclzKUALXI2jZ)
-
 ---
 
 ### Dashboard 3: Steps 9-12 (Sea Transit, Unloading, and Delivery)
@@ -67,8 +63,6 @@ The final dashboard covers the transit and delivery phases, showing key metrics 
 - **Transport to Warehouse**
 - **Delivery and Return**
 
-![Steps 9-12 Dashboard](file-DKCwgC1EuuPDeOZsxyXIFI13)
-
 ---
 
 ## Additional Insights: Logistics Notebook
@@ -78,8 +72,6 @@ The **Logistics Notebook** provides deep insights into the cost of containers at
 - **Container Cost at Ports**
 - **Revenue Loss**
 - **Empty Container Costs**
-
-![Logistics Notebook](file-pwzoiDiDCB8BU2CyBTUdN3z5)
 
 ---
 
