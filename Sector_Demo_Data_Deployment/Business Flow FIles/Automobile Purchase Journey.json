@@ -1,0 +1,342 @@
+[{
+    "summary": "Business Analytics \\- Automobile Purchase Journey",
+    "searchSummary": "Business Analytics - Automobile Purchase Journey",
+    "created": 1729083951754,
+    "modified": 1729173254815,
+    "author": "Dynatrace support user #431900970",
+    "updateToken": "vu9U3hXY3q0ATAAkNzAzODFhMzMtMzY0Ni0zMzM2LTlkNmItMGVjYzRmMWRlOGQ0ACQ0Yjk2YjFiOC04YzhmLTExZWYtODAwMS05NjgwZWE4YzNmN2O-71TeFdjerQ",
+    "origin": "environment",
+    "schemaId": "app:dynatrace.biz.flow:biz-flow-settings",
+    "schemaVersion": "0.1",
+    "resourceContext": {
+      "operations": [
+        "read",
+        "write",
+        "delete"
+      ],
+      "modifications": {
+        "modifiablePaths": [],
+        "nonModifiablePaths": []
+      }
+    },
+    "value": {
+      "name": "Business Analytics - Automobile Purchase Journey",
+      "version": 7,
+      "steps": [
+        {
+          "name": "Order Placed",
+          "id": "a04e14e4-87af-4eb5-b5f8-1e93e13c757a",
+          "isRoot": true,
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Order",
+              "name": "Order",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Automobile Order Production",
+          "id": "72696b8a-4a3b-46fc-a3fd-de47008972f7",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Order - Order Confirmed",
+              "name": "Order - Order Confirmed",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Capacity Checked",
+          "id": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production Planning - Capacity Checked",
+              "name": "Production Planning - Capacity Checked",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Capacity Available",
+          "id": "3fec31b2-e350-40f3-8e74-c721a97411d0",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production Planning - Capacity Available",
+              "name": "Production Planning - Capacity Available",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Production Started",
+          "id": "28d27ab8-93fa-4402-bcd3-731f115f44f6",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production - Production Started",
+              "name": "Production - Production Started",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "In Production",
+          "id": "e0534865-ccb5-4bbb-afc7-970f9db3b94f",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production - In Production",
+              "name": "Production - In Production",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "No Capacity available",
+          "id": "70bd85ff-0b00-4d18-b073-e123439ade2e",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production Planning - Production Delay",
+              "name": "Production Planning - Production Delay",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            },
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:No Capacity Available",
+              "name": "No Capacity Available",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Order Denied",
+          "id": "5c95cec6-39d6-4785-a5ae-50b15b8f2a2e",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Order Denied",
+              "name": "Order Denied",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Delay In Production",
+          "id": "a2a9e5db-5649-4f3e-b7e4-0ed493a11150",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production - Delay In Production",
+              "name": "Production - Delay In Production",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            },
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Delay In Production",
+              "name": "Delay In Production",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "End of Production",
+          "id": "e8f30e38-cbaa-4aa9-b897-dff95f24ec72",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Production - End of Production",
+              "name": "Production - End of Production",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Ready for Shipping",
+          "id": "3cf47044-2e86-4b91-9a51-8affe6d1f426",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Shipping - Ready for Shipping",
+              "name": "Shipping - Ready for Shipping",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "In Shipping",
+          "id": "9cedaf6a-1a1a-4de1-a4cc-3ef8bade2750",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Shipping - In Shipping",
+              "name": "Shipping - In Shipping",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Delay in Shipping",
+          "id": "9920c099-762f-4a8c-8339-9693b6127067",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Shipping - Delay in Shipping",
+              "name": "Shipping - Delay in Shipping",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            },
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Delay in Shipping",
+              "name": "Delay in Shipping",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": true,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Delivered",
+          "id": "c24c8ffa-092a-4036-8e07-a8487233df0f",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Shipping - Delivered",
+              "name": "Shipping - Delivered",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Handover Scheduled",
+          "id": "d20e0683-63c1-47e2-bbb3-cde463a94848",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Handover - Handover Scheduled",
+              "name": "Handover - Handover Scheduled",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        },
+        {
+          "name": "Handed Over",
+          "id": "887220a9-e9de-4d5e-b333-926fe22095b8",
+          "events": [
+            {
+              "id": "provider:Business Analytics - Automobile Order Production-event:Handover - Handed Over",
+              "name": "Handover - Handed Over",
+              "provider": "Business Analytics - Automobile Order Production",
+              "isError": false,
+              "isDisabled": false
+            }
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "id": "a04e14e4-87af-4eb5-b5f8-1e93e13c757a__72696b8a-4a3b-46fc-a3fd-de47008972f7",
+          "source": "a04e14e4-87af-4eb5-b5f8-1e93e13c757a",
+          "target": "72696b8a-4a3b-46fc-a3fd-de47008972f7"
+        },
+        {
+          "id": "72696b8a-4a3b-46fc-a3fd-de47008972f7__5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442",
+          "source": "72696b8a-4a3b-46fc-a3fd-de47008972f7",
+          "target": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442"
+        },
+        {
+          "id": "3fec31b2-e350-40f3-8e74-c721a97411d0__28d27ab8-93fa-4402-bcd3-731f115f44f6",
+          "source": "3fec31b2-e350-40f3-8e74-c721a97411d0",
+          "target": "28d27ab8-93fa-4402-bcd3-731f115f44f6"
+        },
+        {
+          "id": "28d27ab8-93fa-4402-bcd3-731f115f44f6__e0534865-ccb5-4bbb-afc7-970f9db3b94f",
+          "source": "28d27ab8-93fa-4402-bcd3-731f115f44f6",
+          "target": "e0534865-ccb5-4bbb-afc7-970f9db3b94f"
+        },
+        {
+          "id": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442__3fec31b2-e350-40f3-8e74-c721a97411d0",
+          "source": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442",
+          "target": "3fec31b2-e350-40f3-8e74-c721a97411d0"
+        },
+        {
+          "id": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442__70bd85ff-0b00-4d18-b073-e123439ade2e",
+          "source": "5c6a5f64-3cfa-4a85-a8ae-f0cee6ed6442",
+          "target": "70bd85ff-0b00-4d18-b073-e123439ade2e"
+        },
+        {
+          "id": "72696b8a-4a3b-46fc-a3fd-de47008972f7__5c95cec6-39d6-4785-a5ae-50b15b8f2a2e",
+          "source": "72696b8a-4a3b-46fc-a3fd-de47008972f7",
+          "target": "5c95cec6-39d6-4785-a5ae-50b15b8f2a2e"
+        },
+        {
+          "id": "28d27ab8-93fa-4402-bcd3-731f115f44f6__a2a9e5db-5649-4f3e-b7e4-0ed493a11150",
+          "source": "28d27ab8-93fa-4402-bcd3-731f115f44f6",
+          "target": "a2a9e5db-5649-4f3e-b7e4-0ed493a11150"
+        },
+        {
+          "id": "e0534865-ccb5-4bbb-afc7-970f9db3b94f__e8f30e38-cbaa-4aa9-b897-dff95f24ec72",
+          "source": "e0534865-ccb5-4bbb-afc7-970f9db3b94f",
+          "target": "e8f30e38-cbaa-4aa9-b897-dff95f24ec72"
+        },
+        {
+          "id": "e8f30e38-cbaa-4aa9-b897-dff95f24ec72__3cf47044-2e86-4b91-9a51-8affe6d1f426",
+          "source": "e8f30e38-cbaa-4aa9-b897-dff95f24ec72",
+          "target": "3cf47044-2e86-4b91-9a51-8affe6d1f426"
+        },
+        {
+          "id": "3cf47044-2e86-4b91-9a51-8affe6d1f426__9cedaf6a-1a1a-4de1-a4cc-3ef8bade2750",
+          "source": "3cf47044-2e86-4b91-9a51-8affe6d1f426",
+          "target": "9cedaf6a-1a1a-4de1-a4cc-3ef8bade2750"
+        },
+        {
+          "id": "3cf47044-2e86-4b91-9a51-8affe6d1f426__9920c099-762f-4a8c-8339-9693b6127067",
+          "source": "3cf47044-2e86-4b91-9a51-8affe6d1f426",
+          "target": "9920c099-762f-4a8c-8339-9693b6127067"
+        },
+        {
+          "id": "9cedaf6a-1a1a-4de1-a4cc-3ef8bade2750__c24c8ffa-092a-4036-8e07-a8487233df0f",
+          "source": "9cedaf6a-1a1a-4de1-a4cc-3ef8bade2750",
+          "target": "c24c8ffa-092a-4036-8e07-a8487233df0f"
+        },
+        {
+          "id": "c24c8ffa-092a-4036-8e07-a8487233df0f__d20e0683-63c1-47e2-bbb3-cde463a94848",
+          "source": "c24c8ffa-092a-4036-8e07-a8487233df0f",
+          "target": "d20e0683-63c1-47e2-bbb3-cde463a94848"
+        },
+        {
+          "id": "d20e0683-63c1-47e2-bbb3-cde463a94848__887220a9-e9de-4d5e-b333-926fe22095b8",
+          "source": "d20e0683-63c1-47e2-bbb3-cde463a94848",
+          "target": "887220a9-e9de-4d5e-b333-926fe22095b8"
+        }
+      ],
+      "correlationID": "customerId",
+      "kpi": "total",
+      "kpiEvent": {
+        "name": "Order",
+        "provider": "Business Analytics - Automobile Order Production"
+      },
+      "kpiUnit": "$"
+    }
+  }]
