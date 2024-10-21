@@ -4,8 +4,6 @@
   "searchSummary": "Loan Application",
   "created": 1726149707713,
   "modified": 1726152843690,
-  "author": "Dynatrace support user #431900970",
-  "updateToken": "vu9U3hXY3q0ATAAkMTRhMDM0ZmItNDlmZi0zZDJhLWJiZmItOGNkOGE1MmZjNmY2ACRkYTQ0NDBhMC03MTE2LTExZWYtODAwMS0wMTAwMDAwMDAwMDa-71TeFdjerQ",
   "scope": "environment",
   "schemaId": "app:dynatrace.biz.flow:biz-flow-settings",
   "schemaVersion": "0.1",
